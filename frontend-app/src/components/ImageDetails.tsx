@@ -1,4 +1,4 @@
-import { Card, Flex } from "@chakra-ui/react"
+import { Card, Flex, Image } from "@chakra-ui/react"
 import Description from "./Description"
 import EmissionOffset from "./EmisisonOffset"
 import StarRating from "./Rating"
@@ -32,21 +32,18 @@ const ImageDetails = (data: TravelData) => {
     const fallbackImagePath = `../images/fallback.jpg`;
 
     return (
-        <Card padding="3" borderRadius="20" width="400px" height="300px">
-            <Flex 
-            backgroundImage={`url("${imagePath}"), url("${fallbackImagePath}")`}
-            style={{
-                backgroundImage: `url("${imagePath}"), url("${fallbackImagePath}")`
-              }}
-            bgSize="cover"
-            borderRadius="12" 
-            width="100%" 
-            height="100%" 
-            align="center" 
-            justify="center" 
-            flexDir="column"
-            color = "white"
+        <Card borderRadius="20" width="400px" height="300px" align="center" justify="center">
+            <Flex
+                bgSize="cover"
+                borderRadius="12"
+                width="380px"
+                height="280px"
+                align="center"
+                flexDir="column"
+                color="white"
+                position="relative"
             >
+                <Image borderRadius="15" position="absolute" src={imagePath} fallbackSrc={fallbackImagePath} alt="travel image" width="100%" height="100%" objectFit="cover" />
                 <Description title={processedData.title} numberOfCountries={processedData.numberOfCountries} numberOfDays={processedData.numberOfDays} />
                 <EmissionOffset offsetInKg={processedData.co2Emission} />
                 <StarRating rating={processedData.rating} />
