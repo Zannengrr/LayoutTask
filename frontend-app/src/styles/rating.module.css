@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .star {
+    display: flex;
+    width: 18px;
+    margin-right: 2px;
+    color: #f8d448;
+  }
+  
+  .star:last-of-type {
+    margin-right: 0;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+  }
+  
+  @supports (mix-blend-mode: color) {
+    .overlay {
+      opacity: unset;
+      mix-blend-mode: color;
+    }
+  }

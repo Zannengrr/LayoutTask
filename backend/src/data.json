@@ -1,0 +1,37 @@
+{
+    "data":
+    [
+        {
+            "title": "European Quest",
+            "imageName": "image1.jpg",
+            "numberOfCountries": 8,
+            "numberOfDays": 21,
+            "co2Emission": 810,
+            "rating": 4.7
+        },
+        {
+            "title": "Autumn Roadtrip",
+            "imageName": "image2.jpg",
+            "numberOfCountries": 1,
+            "numberOfDays": 14,
+            "co2Emission": 3560,
+            "rating": 2.3
+        },
+        {
+            "title": "Diving adventure in Egypt",
+            "imageName": "image3.jpg",
+            "numberOfCountries": 1,
+            "numberOfDays": 5,
+            "co2Emission": 6920,
+            "rating": 5
+        },
+        {
+            "title": "Diving adventure in Egypt",
+            "imageName": "image223.jpg",
+            "numberOfCountries": 1,
+            "numberOfDays": 5,
+            "co2Emission": 6920,
+            "rating": 5
+        }
+    ]
+}
