@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ImageDetails from "./ImageDetails";
+import { SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 
 interface serverTravelData{
     data:TravelData[];
@@ -8,6 +9,7 @@ interface serverTravelData{
 const TravelData = () => {
     const [travelData, setTravelData] = useState<TravelData[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
         setIsLoading(true);
@@ -29,22 +31,23 @@ const TravelData = () => {
                 })
                 .catch(error => {
                     console.log(`Error: ${error}`);
+                    setError(error);
                 }).finally(() => {
                     setIsLoading(false);
                 });
         }
 
         fetchData();
-        return () => {
-            if(isLoading) abortController.abort();
-        }
     }, [])
 
-    if (isLoading) return "Loading";
+    if (isLoading) return <Spinner />;
+    if (error) return <Text>Error: {error.message} </Text>;
 
     return (
         <>
+            <SimpleGrid columns={[1, null, null, 2, 3]} spacing={10}>
             {travelData && travelData.map((travelData, index) => <ImageDetails key={`${travelData.title}-${index}`} {...travelData} />)}
+            </SimpleGrid>
         </>
     );
 }
