@@ -27,11 +27,11 @@
         },
         {
             "title": "Diving adventure in Egypt",
-            "imageName": "image223.jpg",
+            "imageName": "image22a.jpg",
             "numberOfCountries": 1,
-            "numberOfDays": 5,
-            "co2Emission": 6920,
-            "rating": 5
+            "numberOfDays": 10,
+            "co2Emission": 1920,
+            "rating": 1.8
         }
     ]
 }

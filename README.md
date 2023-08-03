@@ -30,7 +30,7 @@ on how to run the project.
 
 1.  To install server dependencies if using Visual Studio Code, position yourself in the folder of **backend** through terminal and ```run npm install``` command
 
-2.  To run: run ```npm run start``` command from the **backend** folder in the Visual Studio Code terminal or open package.json in the same folder and click the Debug instruction above scripts tag and select start option
+2.  To run: run ```npm run dev``` command from the **backend** folder in the Visual Studio Code terminal or open package.json in the same folder and click the Debug instruction above scripts tag and select start option
 
 3.  When the server runs it will display a link you can open to where it started.
 

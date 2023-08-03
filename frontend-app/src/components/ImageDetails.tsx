@@ -43,7 +43,7 @@ const ImageDetails = (data: TravelData) => {
                 color="white"
                 position="relative"
             >
-                <Image borderRadius="15" position="absolute" src={imagePath} fallbackSrc={fallbackImagePath} alt="travel image" width="100%" height="100%" objectFit="cover" />
+                <Image borderRadius="15" position="absolute" src={imagePath} fallbackSrc={fallbackImagePath} alt="travel image" width="100%" height="100%" objectFit="cover" filter="brightness(70%)"/>
                 <Description title={processedData.title} numberOfCountries={processedData.numberOfCountries} numberOfDays={processedData.numberOfDays} />
                 <EmissionOffset offsetInKg={processedData.co2Emission} />
                 <StarRating rating={processedData.rating} />
