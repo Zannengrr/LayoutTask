@@ -11,10 +11,6 @@
     color: #f8d448;
   }
   
-  .star:last-of-type {
-    margin-right: 0;
-  }
-  
   .overlay {
     position: absolute;
     top: 0;

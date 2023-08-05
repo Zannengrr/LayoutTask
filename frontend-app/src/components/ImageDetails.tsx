@@ -36,8 +36,8 @@ const ImageDetails = (data: TravelData) => {
             <Flex
                 bgSize="cover"
                 borderRadius="12"
-                width="380px"
-                height="280px"
+                w={[400, null, 380]}
+                h={[400, null, 280]}
                 align="center"
                 flexDir="column"
                 color="white"

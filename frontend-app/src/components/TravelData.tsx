@@ -55,7 +55,6 @@ const TravelData = () => {
         return () => {
             eventSource.close();
         }
-
     }, [])
 
     if (isLoading) return <Spinner />;
